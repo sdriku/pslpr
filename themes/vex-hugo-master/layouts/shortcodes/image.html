@@ -1,0 +1,137 @@
+<style>
+
+    /* From caption.scss */
+    .caption {
+        display:       block;
+        font-family:   Arial, Helvetica, sans-serif;
+        font-size:     10px;
+        color:         grey;
+        text-align:    center;
+        font-style:    italic;
+        padding-right: 10px;
+        padding-left:  10px;
+    }
+    
+    /* From fancybox.scss */
+    .fancybox-caption-wrap {
+        padding:0;
+        background:0 0
+    }
+    .fancybox-caption-wrap .fancybox-caption {
+        text-align:center;
+        border:none 
+    }
+    .fancybox-thumbs {
+        top:auto;
+        width:auto;
+        bottom:0;
+        left:0;
+        right:0;
+        height:95px;
+        padding:10px 10px 5px 10px;
+        box-sizing:border-box;
+        opacity:1;
+        background:0 0
+    }
+    .fancybox-show-thumbs .fancybox-inner {
+        right:0;
+        bottom:95px
+    }
+    
+    /* From figure.scss */
+    .figure.clear {
+        clear:both
+    }
+    .figure.center {
+        width:calc(100% - 4px);
+        margin:2px auto;
+    }
+    .figure.center .fig-img {
+        margin:2px auto
+    }
+    .figure.fig-20,.figure.fig-25,.figure.fig-33,.figure.fig-50,.figure.fig-75,.figure.left {
+        float:left;
+        margin:2px
+    }
+    .figure.right {
+        float:right;
+        margin:2px
+    }
+    .figure .fig-video {
+        width:100%;
+        height:auto
+    }
+    .figure.fig-20 {
+        width:calc(20% - 4px)
+    }
+    .figure.fig-25 {
+        width:calc(25% - 4px)
+    }
+    .figure.fig-33 {
+        width:calc(33.3% - 4px)
+    }
+    .figure.fig-50 {
+        width:calc(50% - 4px)
+    }
+    .figure.fig-75 {
+        width:calc(75% - 4px)
+    }
+    .figure.fig-100 {
+        width:calc(100% - 4px);
+        margin:2px
+    }
+    .figure.figure--fullWidth {
+        width:100%
+    }
+    .figure.figure--fullWidth .figure-img {
+        width:100%;
+        margin:0 auto;
+        transition:width .25s ease-in-out;
+        -webkit-transition:width .25s ease-in-out
+    }
+    @media only screen and (max-width :767px) {
+        .fig-20 .caption,.fig-25 .caption,.fig-33 .caption {
+            display:none
+        }
+    }
+    @media only screen and (min-width :1024px) and (max-width :1279px) {
+        #main[data-behavior="1"] .pushed .figure.figure--fullWidth img.figure-img,#main[data-behavior="2"] .pushed .figure.figure--fullWidth img.figure-img{width:calc(100% - 250px)}#main[data-behavior="3"] .pushed .figure.figure--fullWidth img.figure-img{width:calc(100% - 75px + 1px)}#main[data-behavior="4"] .pushed .figure.figure--fullWidth img.figure-img,#main[data-behavior="5"] .pushed .figure.figure--fullWidth img.figure-img{width:calc(100% - 250px)}#main[data-behavior="6"] .pushed .figure.figure--fullWidth img.figure-img{width:calc(100% - 75px + 1px)}}@media only screen and (min-width :1280px){#main[data-behavior="1"] .pushed .figure.figure--fullWidth img.figure-img{width:calc(100% - 500px)}#main[data-behavior="2"] .pushed .figure.figure--fullWidth img.figure-img{width:calc(100% - 250px)}#main[data-behavior="3"] .pushed .figure.figure--fullWidth img.figure-img{width:calc(100% - 75px + 1px)}#main[data-behavior="4"] .pushed .figure.figure--fullWidth img.figure-img{width:calc(100% - 500px)}#main[data-behavior="5"] .pushed .figure.figure--fullWidth img.figure-img{width:calc(100% - 250px)}#main[data-behavior="6"] .pushed .figure.figure--fullWidth img.figure-img{width:calc(100% - 75px + 1px)}}
+    
+</style>
+
+{{ $.Scratch.Set "i-classes" (split (.Get "classes") " ") }}
+{{ if in ($.Scratch.Get "i-classes") "clear" }} 
+  {{ $.Scratch.Set "i-clear" 1 }}
+  {{ $classes := $.Scratch.Get "i-classes" }}
+  {{ $.Scratch.Set "i-classes" (slice) }}
+  {{ range $classes }}
+    {{ if ne . "clear" }}
+      {{ $.Scratch.Add "i-classes" . }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+{{ if in ($.Scratch.Get "i-classes") "fancybox" }} 
+  {{ $.Scratch.Set "i-fancybox" 1 }}
+  {{ $classes := $.Scratch.Get "i-classes" }}
+  {{ $.Scratch.Set "i-classes" (slice) }}
+  {{ range $classes }}
+    {{ if ne . "fancybox" }}
+      {{ $.Scratch.Add "i-classes" . }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+<div class="figure {{ delimit ($.Scratch.Get "i-classes") " " }}" {{ with (.Get "thumbnailWidth") }}style="width:{{ . }};"{{ end }}>
+  {{ if eq ($.Scratch.Get "i-fancybox") 1 }}
+    <a class="fancybox" href="{{ .Get "src" }}"{{ with (.Get "title") }} title="{{ . }}"{{ end }} data-fancybox="{{ with (.Get "group") }}{{ . }}{{ end }}">
+  {{ end }}
+    <img class="fig-img" src="{{ with (.Get "thumbnail") }}{{ . }}{{ else }}{{ .Get "src" }}{{ end }}" {{ if or (.Get "thumbnail-width") (.Get "thumbnail-height") }}style="{{ with (.Get "thumbnail-width") }}width: {{ . }};{{ end }}{{ with (.Get "thumbnail-height") }}height: {{ . }};{{ end }}"{{ end }}{{ with (.Get "title") }} alt="{{ . }}"{{ end }} loading="lazy">
+  {{ if eq ($.Scratch.Get "i-fancybox") 1 }}
+    </a>
+  {{ end }}
+  {{ if and (.Get "title") (not (in ($.Scratch.Get "i-classes") "nocaption")) }} 
+    <span class="caption">{{ .Get "title" }}</span>
+  {{ end }}
+</div>
+{{ if eq ($.Scratch.Get "i-clear") 1 }}
+  <div style="clear:both;"></div>
+{{ end }}
