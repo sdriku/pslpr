@@ -1,7 +1,7 @@
 ---
 title: "All latest Smart Watch"
 description : "this is a meta description"
-mainsection: true
+mainsection: "true"
 draft: false
 ---
 

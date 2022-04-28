@@ -137,7 +137,7 @@ collections:
   - name: 'sectionblog'
     label: 'Blog main page'
     description: 'You can edit here the main page of Blog, mainly its title and SEO description'
-    folder: 'english/blog'
+    folder: 'content/english/blog'
     create: false
     editor:
       preview: true
