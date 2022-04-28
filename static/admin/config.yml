@@ -24,6 +24,7 @@ collections:
           - label: 'Banner Settings'
             name: 'banner'
             widget: 'object'
+            collapsed: true
             fields:
               - { label: 'Enable', name: 'enable', widget: 'select', options: ["true", "false"], hint: 'Select true to activate the section on the homepage. Select false to make the section disappear.' }
               - { label: 'Headline', name: 'title', widget: 'string', required: false, hint: 'This is the main headline for this section of your homepage, appearing in bold. I made this field optional in case you are fine with having just text but no headline above.' }
@@ -39,6 +40,7 @@ collections:
           - label: 'Feature Settings'
             name: 'features'
             widget: 'object'
+            collapsed: true
             fields:
               - { label: 'Enable', name: 'enable', widget: 'select', options: ["true", "false"], hint: 'Select true to activate the section on the homepage. Select false to make the section disappear.' }
               - { label: 'Headline', name: 'title', widget: 'string', hint: 'This is the main headline for this section of your homepage, appearing in bold.' }
@@ -65,6 +67,7 @@ collections:
           - label: 'Promo Settings'
             name: 'promo'
             widget: 'object'
+            collapsed: true
             fields:
               - { label: 'Enable', name: 'enable', widget: 'select', options: ["true", "false"], hint: 'Select true to activate the section on the homepage. Select false to make the section disappear.' }
               - { label: 'Image', name: 'image', widget: 'image', hint: 'Chose an image to illustrate this section'}
@@ -74,6 +77,7 @@ collections:
           - label: 'Products Settings'
             name: 'products'
             widget: 'object'
+            collapsed: true
             fields:
               - { label: 'Enable', name: 'enable', widget: 'select', options: ["true", "false"], hint: 'Select true to activate the section on the homepage. Select false to make the section disappear.'}
               - { label: 'Headline', name: 'title', widget: 'string', hint: 'This is the main headline for this section of your homepage, appearing in bold.'}
@@ -81,6 +85,7 @@ collections:
           - label: 'Subscription Settings'
             name: 'subscription'
             widget: 'object'
+            collapsed: true
             fields:
               - { label: 'Enable', name: 'enable', widget: 'select', options: ["true", "false"], hint: 'Select true to activate the section on the homepage. Select false to make the section disappear.'}
               - { label: 'Image', name: 'image', widget: 'image', hint: 'Chose an image to illustrate this section'}
@@ -91,6 +96,7 @@ collections:
           - label: 'Testimonial Settings'
             name: 'testimonial'
             widget: 'object'
+            collapsed: true
             fields:
               - { label: 'Enable', name: 'enable', widget: 'select', options: ["true", "false"], hint: 'Select true to activate the section on the homepage. Select false to make the section disappear.' }
               - { label: 'Headline', name: 'title', widget: 'string', hint: 'This is the main headline for this section of your homepage, appearing in bold.'}
