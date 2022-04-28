@@ -10,114 +10,6 @@ locale: 'en'
 media_folder: static/assets/img
 public_folder: assets/img
 collections:
-  - name: 'sectionblog'
-    label: 'Blog main page'
-    description: 'You can edit here the main page of Blog, mainly its title and SEO description'
-    folder: 'english/blog'
-    create: false
-    editor:
-      preview: true
-    filter: {field: "mainsection", value: "true"}
-    fields:
-      - { label: 'Page Title and SEO Title', name: 'title', widget: 'string', hint: 'This is the Title that will apear on the related page, and also your SEO title that may appear in Google search results.' }
-      - { label: 'Description SEO', name: 'description', widget: 'string', hint: 'This is your SEO description, include keywords if possible, none of this will appear on your website but may appear in Google search results.' }
-  - name: 'myarticles'
-    label: 'My Blog Articles'
-    description: 'You can edit here each article of your blog'
-    folder: 'english/blog'
-    create: true
-    editor:
-      preview: true
-    filter: {field: "mainsection", value: "false"}
-    fields:
-      - { label: 'Article Title and Article SEO Title', name: 'title', widget: 'string', hint: 'This is the Title that will apear on the related page, and also your SEO title that may appear in Google search results.' }
-      - { label: 'Description SEO', name: 'description', widget: 'string', hint: 'This is the description of your article, and also your SEO description + include keywords if possible, this may appear in Google search results.' }
-      - { label: 'Article order', name: 'weight', widget: 'number', hint: 'This is where you reorganize the order in which your articles appear on your page. 1 will apear 1st, 2 will be 2nd etc.'}
-      - { label: 'Illustration', name: 'image', widget: 'image', hint: 'Illustrate your article with a picture' }
-      - { label: 'Contenu', name: 'body', widget: 'markdown', hint: 'Page content + add a few pics if necessary + dont forget to insert a few keywords' }
-
-  - name: 'productssection'
-    label: 'Products Main Page'
-    description: 'You can edit here your Products Main page'
-    folder: 'english/products'
-    create: false
-    editor:
-      preview: true
-    filter: {field: "mainsection", value: "true"}
-    fields:
-      - { label: 'Page Title and SEO Title', name: 'title', widget: 'string', hint: 'This is the Title that will apear on the related page, and also your SEO title that may appear in Google search results.' }
-      - { label: 'Description SEO', name: 'description', widget: 'string', hint: 'This is your SEO description, include keywords if possible, none of this will appear on your website but may appear in Google search results.' }
-  - name: 'myproducts'
-    label: 'My Products'
-    description: 'You can edit here info regarding each of your products'
-    folder: 'english/products'
-    create: true
-    editor:
-      preview: true
-    filter: {field: "mainsection", value: "false"}
-    fields:
-      - { label: 'Article Title and Article SEO Title', name: 'title', widget: 'string', hint: 'This is the Title that will apear on the related page, and also your SEO title that may appear in Google search results.' }
-      - { label: 'Description SEO', name: 'description', widget: 'string', hint: 'This is the description of your product, and also your SEO description + include keywords if possible, this may appear in Google search results.' }
-      - { label: 'Product order', name: 'weight', widget: 'number', hint: 'This is where you reorganize the order in which your products appear on your page. 1 will apear 1st, 2 will be 2nd etc.'}
-      - { label: 'Main picture', name: 'mainimage', widget: 'image', hint: 'This is the main picture of your product, the one clients can see from the Products Main Page' }
-      - { label: 'Image loading speed', name: 'loading', widget: 'select', options: ["lazy", "eager"], hint: 'Choose "eager" for the 4 products placed on top of your page + choose "lazy" for all following products. That way images of products number 5 and beyond will load ONLY when client scrolls the page. This will help a lot with the Website Speed and SEO Performance.' }
-      - { label: 'Other Pictures', name: 'images', widget: 'list', summary: '{{fields.image}}', field: {label: Image, name: image, widget: image}, hint: 'Add up to 3 more pìcture of your article, so clients can see it from different angles' }
-      - { label: 'Price', name: 'price', widget: 'number', hint: 'Price of your product' }
-      - { label: 'Discount Price', name: 'discount_price', widget: 'number', hint: 'Price of your product' }
-      - { label: 'Colors', name: 'colors', widget: 'select', multiple: true, options: ["black", "white", "gray"], hint: 'Colors of your product' }
-      - { label: 'Sizes', name: 'sizes', widget: 'select', multiple: true, options: ["small", "medium", "large"], hint: 'Sizes of your product' }
-      - { label: 'Content', name: 'body', widget: 'markdown', hint: 'Content for your product page + talk about your product + dont forget to insert a few keywords' }
-      
-  - name: 'sectioncontact'
-    label: 'Contact Page'
-    description: 'You can edit your contact page (except for the contact form, which is hard-coded).'
-    folder: 'english/contact'
-    create: false
-    editor:
-      preview: true
-    fields:
-      - { label: 'Contact page SEO Title', name: 'title', widget: 'string', hint: 'This is your SEO title that may appear in Google search results.' }
-      - { label: 'SEO Description', name: 'description', widget: 'string', hint: 'This is your SEO description + include keywords if possible, this may appear in Google search results.' }
-      - label: 'Office settings'
-        name: 'office'
-        widget: 'office'
-        fields:
-        - { label: 'Title', name: 'title', widget: 'string', hint: 'This is the Title that will appear on top of the Contact page'}
-        - { label: 'Mobile', name: 'mobile', widget: 'string', required: false, hint: 'This is your mobile number, leave it empty and the field will disappear from the Contact page.'}
-        - { label: 'email', name: 'email', widget: 'string', required: false, hint: 'This is your email address, leave it empty and the field will disappear from the Contact page.'}
-        - { label: 'Location', name: 'location', widget: 'string', required: false, hint: 'This is your location, leave it empty and the field will disappear from the Contact page.'}
-        - { label: 'Content', name: 'content', widget: 'string', hint: 'This is the content that will appear just below your contact details.'}
-      - label: 'Opening Hours'
-        name: 'opening_hour'
-        widget: 'opening_hour'
-        fields:
-        - { label: 'Title', name: 'title', widget: 'string', required: false, hint: 'This is the Title that might appear on the right side of your Contact details. It was designed for Opening Hours but your can do whatever you want with it really (Shipping, Support hours..). If you leave these fields empty, nothing will appear on the right side of your contact details.'}
-        - { label: 'Day and Time', name: 'day_time', widget: 'string', required: false, hint: 'This is where you caN announce your SUpport Hours, shipping details or else. If you leave these fields empty, nothing will appear on the right side of your contact details.'}
-
-  - name: 'sectionprivacypolicy'
-    label: 'Privacy Policy page'
-    description: 'You can edit your Privacy Policy page.'
-    folder: 'english/privacy-policy'
-    create: false
-    editor:
-      preview: true
-    fields:
-      - { label: 'Privacy Policy Title', name: 'title', widget: 'string', hint: 'This is the title of your page, most likely Privacy Policy (or anything else you like). This will appear on top of your page.' }
-      - { label: 'SEO Description', name: 'description', widget: 'string', hint: 'This is your SEO description + this will not appear on your webpage, no need to insert keywords in Privacy Policy, we just make Google happy as it wants every webpage on the web to include a decription.' }
-      - { label: 'Content', name: 'content', widget: 'string', hint: 'This is the content, details of your Privacy Policy.'}
-
-  - name: 'sectiontermsandconditions'
-    label: 'Terms and Conditions page'
-    description: 'You can edit your Terms and Conditions page.'
-    folder: 'english/terms-conditions'
-    create: false
-    editor:
-      preview: true
-    fields:
-      - { label: 'Terms and Conditions Title', name: 'title', widget: 'string', hint: 'This is the title of your page, most likely Terms and Conditions (or anything else you like). This will appear on top of your page.' }
-      - { label: 'SEO Description', name: 'description', widget: 'string', hint: 'This is your SEO description + this will not appear on your webpage, no need to insert keywords in Terms and Conditions, we just make Google happy as it wants every webpage on the web to include a decription.' }
-      - { label: 'Content', name: 'content', widget: 'string', hint: 'This is the content, details of your Privacy Policy.'}
-
   - name: 'homepage'
     label: 'Homepage Configuration'
     description: 'You can enable or disable + edit the many parts of your homepage. Only thing you cannot do is reorder these elements on the homepage as this is hard-coded. If you want to move around sections, contact me and provide the order of appearance for each section.'
@@ -209,3 +101,111 @@ collections:
               - { label: 'Name of reviewer', name: 'name', widget: 'string', hint: 'Type the name of the client providing the testimony.'}
               - { label: 'Who is reviewer', name: 'designation', widget: 'string', required: false, hint: 'provide a few words presentation of this person if you want too. Leave it empty otherwise, this field is optional.'}
               - { label: 'Picture of reviewer', name: 'image', widget: 'image', required: false, hint: 'I made this field optional, but reviews online are much more powerful if there is a picture of the reviewer. Testimony can still be fake, but with a picture potential clients can relate better.'}
+
+  - name: 'productssection'
+    label: 'Products Main Page'
+    description: 'You can edit here your Products Main page'
+    folder: 'content/english/products'
+    create: false
+    editor:
+      preview: true
+    filter: {field: "mainsection", value: "true"}
+    fields:
+      - { label: 'Page Title and SEO Title', name: 'title', widget: 'string', hint: 'This is the Title that will apear on the related page, and also your SEO title that may appear in Google search results.' }
+      - { label: 'Description SEO', name: 'description', widget: 'string', hint: 'This is your SEO description, include keywords if possible, none of this will appear on your website but may appear in Google search results.' }
+  - name: 'myproducts'
+    label: 'My Products'
+    description: 'You can edit here info regarding each of your products'
+    folder: 'content/english/products'
+    create: true
+    editor:
+      preview: true
+    filter: {field: "mainsection", value: "false"}
+    fields:
+      - { label: 'Article Title and Article SEO Title', name: 'title', widget: 'string', hint: 'This is the Title that will apear on the related page, and also your SEO title that may appear in Google search results.' }
+      - { label: 'Description SEO', name: 'description', widget: 'string', hint: 'This is the description of your product, and also your SEO description + include keywords if possible, this may appear in Google search results.' }
+      - { label: 'Product order', name: 'weight', widget: 'number', hint: 'This is where you reorganize the order in which your products appear on your page. 1 will apear 1st, 2 will be 2nd etc.'}
+      - { label: 'Main picture', name: 'mainimage', widget: 'image', hint: 'This is the main picture of your product, the one clients can see from the Products Main Page' }
+      - { label: 'Image loading speed', name: 'loading', widget: 'select', options: ["lazy", "eager"], hint: 'Choose "eager" for the 4 products placed on top of your page + choose "lazy" for all following products. That way images of products number 5 and beyond will load ONLY when client scrolls the page. This will help a lot with the Website Speed and SEO Performance.' }
+      - { label: 'Other Pictures', name: 'images', widget: 'list', summary: '{{fields.image}}', field: {label: Image, name: image, widget: image}, hint: 'Add up to 3 more pìcture of your article, so clients can see it from different angles' }
+      - { label: 'Price', name: 'price', widget: 'number', hint: 'Price of your product' }
+      - { label: 'Discount Price', name: 'discount_price', widget: 'number', hint: 'Price of your product' }
+      - { label: 'Colors', name: 'colors', widget: 'select', multiple: true, options: ["black", "white", "gray"], hint: 'Colors of your product' }
+      - { label: 'Sizes', name: 'sizes', widget: 'select', multiple: true, options: ["small", "medium", "large"], hint: 'Sizes of your product' }
+      - { label: 'Content', name: 'body', widget: 'markdown', hint: 'Content for your product page + talk about your product + dont forget to insert a few keywords' }
+
+  - name: 'sectionblog'
+    label: 'Blog main page'
+    description: 'You can edit here the main page of Blog, mainly its title and SEO description'
+    folder: 'english/blog'
+    create: false
+    editor:
+      preview: true
+    filter: {field: "mainsection", value: "true"}
+    fields:
+      - { label: 'Page Title and SEO Title', name: 'title', widget: 'string', hint: 'This is the Title that will apear on the related page, and also your SEO title that may appear in Google search results.' }
+      - { label: 'Description SEO', name: 'description', widget: 'string', hint: 'This is your SEO description, include keywords if possible, none of this will appear on your website but may appear in Google search results.' }
+  - name: 'myarticles'
+    label: 'My Blog Articles'
+    description: 'You can edit here each article of your blog'
+    folder: 'content/english/blog'
+    create: true
+    editor:
+      preview: true
+    filter: {field: "mainsection", value: "false"}
+    fields:
+      - { label: 'Article Title and Article SEO Title', name: 'title', widget: 'string', hint: 'This is the Title that will apear on the related page, and also your SEO title that may appear in Google search results.' }
+      - { label: 'Description SEO', name: 'description', widget: 'string', hint: 'This is the description of your article, and also your SEO description + include keywords if possible, this may appear in Google search results.' }
+      - { label: 'Article order', name: 'weight', widget: 'number', hint: 'This is where you reorganize the order in which your articles appear on your page. 1 will apear 1st, 2 will be 2nd etc.'}
+      - { label: 'Illustration', name: 'image', widget: 'image', hint: 'Illustrate your article with a picture' }
+      - { label: 'Contenu', name: 'body', widget: 'markdown', hint: 'Page content + add a few pics if necessary + dont forget to insert a few keywords' }
+      
+  - name: 'sectioncontact'
+    label: 'Contact Page'
+    description: 'You can edit your contact page (except for the contact form, which is hard-coded).'
+    folder: 'content/english/contact'
+    create: false
+    editor:
+      preview: true
+    fields:
+      - { label: 'Contact page SEO Title', name: 'title', widget: 'string', hint: 'This is your SEO title that may appear in Google search results.' }
+      - { label: 'SEO Description', name: 'description', widget: 'string', hint: 'This is your SEO description + include keywords if possible, this may appear in Google search results.' }
+      - label: 'Office settings'
+        name: 'office'
+        widget: 'office'
+        fields:
+        - { label: 'Title', name: 'title', widget: 'string', hint: 'This is the Title that will appear on top of the Contact page'}
+        - { label: 'Mobile', name: 'mobile', widget: 'string', required: false, hint: 'This is your mobile number, leave it empty and the field will disappear from the Contact page.'}
+        - { label: 'email', name: 'email', widget: 'string', required: false, hint: 'This is your email address, leave it empty and the field will disappear from the Contact page.'}
+        - { label: 'Location', name: 'location', widget: 'string', required: false, hint: 'This is your location, leave it empty and the field will disappear from the Contact page.'}
+        - { label: 'Content', name: 'content', widget: 'string', hint: 'This is the content that will appear just below your contact details.'}
+      - label: 'Opening Hours'
+        name: 'opening_hour'
+        widget: 'opening_hour'
+        fields:
+        - { label: 'Title', name: 'title', widget: 'string', required: false, hint: 'This is the Title that might appear on the right side of your Contact details. It was designed for Opening Hours but your can do whatever you want with it really (Shipping, Support hours..). If you leave these fields empty, nothing will appear on the right side of your contact details.'}
+        - { label: 'Day and Time', name: 'day_time', widget: 'string', required: false, hint: 'This is where you caN announce your SUpport Hours, shipping details or else. If you leave these fields empty, nothing will appear on the right side of your contact details.'}
+
+  - name: 'sectionprivacypolicy'
+    label: 'Privacy Policy page'
+    description: 'You can edit your Privacy Policy page.'
+    folder: 'content/english/privacy-policy'
+    create: false
+    editor:
+      preview: true
+    fields:
+      - { label: 'Privacy Policy Title', name: 'title', widget: 'string', hint: 'This is the title of your page, most likely Privacy Policy (or anything else you like). This will appear on top of your page.' }
+      - { label: 'SEO Description', name: 'description', widget: 'string', hint: 'This is your SEO description + this will not appear on your webpage, no need to insert keywords in Privacy Policy, we just make Google happy as it wants every webpage on the web to include a decription.' }
+      - { label: 'Content', name: 'content', widget: 'string', hint: 'This is the content, details of your Privacy Policy.'}
+
+  - name: 'sectiontermsandconditions'
+    label: 'Terms and Conditions page'
+    description: 'You can edit your Terms and Conditions page.'
+    folder: 'content/english/terms-conditions'
+    create: false
+    editor:
+      preview: true
+    fields:
+      - { label: 'Terms and Conditions Title', name: 'title', widget: 'string', hint: 'This is the title of your page, most likely Terms and Conditions (or anything else you like). This will appear on top of your page.' }
+      - { label: 'SEO Description', name: 'description', widget: 'string', hint: 'This is your SEO description + this will not appear on your webpage, no need to insert keywords in Terms and Conditions, we just make Google happy as it wants every webpage on the web to include a decription.' }
+      - { label: 'Content', name: 'content', widget: 'string', hint: 'This is the content, details of your Privacy Policy.'}
