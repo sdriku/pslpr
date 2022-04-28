@@ -1,6 +1,6 @@
 ---
 title: "Our Latest Post"
 description : "this is a meta description"
-mainsection: true
+mainsection: "true"
 draft: false
 ---

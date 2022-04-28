@@ -4,7 +4,7 @@ date: 2019-10-17T11:22:16+06:00
 image: "assets/img/14.jpg"
 description : "this is a meta description"
 weight: 4
-mainsection: false
+mainsection: "false"
 draft: false
 ---
 
