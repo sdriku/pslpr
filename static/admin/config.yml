@@ -195,7 +195,7 @@ collections:
 
       - label: 'Subscription Settings'
         name: 'subscription'
-        widget: 'object'
+        widget: 'subscription'
         fields:
           - { label: 'Enable', name: 'enable', widget: 'select', options: ["true", "false"], hint: 'Select true to activate the section on the homepage. Select false to make the section disappear.'}
           - { label: 'Image', name: 'image', widget: 'image', hint: 'Chose an image to illustrate this section'}
@@ -203,18 +203,23 @@ collections:
           - { label: 'Content', name: 'content', widget: 'string', required: false, hint: 'This is the text that appears below your headline. I made this field optional in case you are fine with having a headline without text below.'}
           - { label: "Text inside field", name: 'placeholder', widget: 'string', hint: 'Default to Your Email Address Here, but you can formulate it as you like.'}
 
-      - label: 'Testimonial Settings', name: 'testimonial', widget: 'object'
-        - { label: 'Enable', name: 'enable', widget: 'select', options: ["true", "false"], hint: 'Select true to activate the section on the homepage. Select false to make the section disappear.' }
-        - { label: 'Headline', name: 'title', widget: 'string', hint: 'This is the main headline for this section of your homepage, appearing in bold.'}
-        - label: 'Testimonial list', name: 'testimonial_item', widget: 'object'
+      - label: 'Testimonial Settings'
+        name: 'testimonial'
+        widget: 'testimonial'
         fields:
-          - { label: 'Name of the reviewer', name: 'name', widget: 'string', hint: 'Type the name of the client providing the testimony.'}
-          - { label: 'Who is the reviewer', name: 'designation', widget: 'string', required: false, hint: 'provide a few words presentation of this person if you want too. Leave it empty otherwise, this field is optional.'}
-          - { label: 'Picture of the reviewer', name: 'image', widget: 'image', required: false, hint: 'I made this field optional, but reviews online are much more powerful if there is a picture of the reviewer. Testimony can still be fake, but with a picture potential clients can relate better.'}
-          - { label: 'Name of the reviewer', name: 'name', widget: 'string', hint: 'Type the name of the client providing the testimony.'}
-          - { label: 'Who is the reviewer', name: 'designation', widget: 'string', required: false, hint: 'provide a few words presentation of this person if you want too. Leave it empty otherwise, this field is optional.'}
-          - { label: 'Picture of the reviewer', name: 'image', widget: 'image', required: false, hint: 'I made this field optional, but reviews online are much more powerful if there is a picture of the reviewer. Testimony can still be fake, but with a picture potential clients can relate better.'}
-          - { label: 'Name of the reviewer', name: 'name', widget: 'string', hint: 'Type the name of the client providing the testimony.'}
-          - { label: 'Who is the reviewer', name: 'designation', widget: 'string', required: false, hint: 'provide a few words presentation of this person if you want too. Leave it empty otherwise, this field is optional.'}
-          - { label: 'Picture of the reviewer', name: 'image', widget: 'image', required: false, hint: 'I made this field optional, but reviews online are much more powerful if there is a picture of the reviewer. Testimony can still be fake, but with a picture potential clients can relate better.'}
+          - { label: 'Enable', name: 'enable', widget: 'select', options: ["true", "false"], hint: 'Select true to activate the section on the homepage. Select false to make the section disappear.' }
+          - { label: 'Headline', name: 'title', widget: 'string', hint: 'This is the main headline for this section of your homepage, appearing in bold.'}
+          - label: 'Testimonial list'
+            name: 'testimonial_item'
+            widget: 'testimonial_item'
+            fields:
+              - { label: 'Name of the reviewer', name: 'name', widget: 'string', hint: 'Type the name of the client providing the testimony.'}
+              - { label: 'Who is the reviewer', name: 'designation', widget: 'string', required: false, hint: 'provide a few words presentation of this person if you want too. Leave it empty otherwise, this field is optional.'}
+              - { label: 'Picture of the reviewer', name: 'image', widget: 'image', required: false, hint: 'I made this field optional, but reviews online are much more powerful if there is a picture of the reviewer. Testimony can still be fake, but with a picture potential clients can relate better.'}
+              - { label: 'Name of the reviewer', name: 'name', widget: 'string', hint: 'Type the name of the client providing the testimony.'}
+              - { label: 'Who is the reviewer', name: 'designation', widget: 'string', required: false, hint: 'provide a few words presentation of this person if you want too. Leave it empty otherwise, this field is optional.'}
+              - { label: 'Picture of the reviewer', name: 'image', widget: 'image', required: false, hint: 'I made this field optional, but reviews online are much more powerful if there is a picture of the reviewer. Testimony can still be fake, but with a picture potential clients can relate better.'}
+              - { label: 'Name of the reviewer', name: 'name', widget: 'string', hint: 'Type the name of the client providing the testimony.'}
+              - { label: 'Who is the reviewer', name: 'designation', widget: 'string', required: false, hint: 'provide a few words presentation of this person if you want too. Leave it empty otherwise, this field is optional.'}
+              - { label: 'Picture of the reviewer', name: 'image', widget: 'image', required: false, hint: 'I made this field optional, but reviews online are much more powerful if there is a picture of the reviewer. Testimony can still be fake, but with a picture potential clients can relate better.'}
 
