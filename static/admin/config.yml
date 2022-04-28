@@ -172,6 +172,7 @@ collections:
       - { label: 'SEO Description', name: 'description', widget: 'string', hint: 'This is your SEO description + include keywords if possible, this may appear in Google search results.' }
       - label: 'Office settings'
         name: 'office'
+        description: 'Here is the section where you can mention your contact details.'
         widget: 'object'
         fields:
         - { label: 'Title', name: 'title', widget: 'string', hint: 'This is the Title that will appear on top of the Contact page'}
@@ -181,10 +182,11 @@ collections:
         - { label: 'Content', name: 'content', widget: 'string', hint: 'This is the content that will appear just below your contact details.'}
       - label: 'Opening Hours'
         name: 'opening_hour'
+        description: 'This section is optional. If you leave it empty, nothing will appear on the website. Otherwise you can use it to mention Shipping, Support, Refund Policy etc..'
         widget: 'object'
         fields:
         - { label: 'Title', name: 'title', widget: 'string', required: false, hint: 'This is the Title that might appear on the right side of your Contact details. It was designed for Opening Hours but your can do whatever you want with it really (Shipping, Support hours..). If you leave these fields empty, nothing will appear on the right side of your contact details.'}
-        - { label: 'Day and Time', name: 'day_time', widget: 'string', required: false, hint: 'This is where you caN announce your SUpport Hours, shipping details or else. If you leave these fields empty, nothing will appear on the right side of your contact details.'}
+        - { label: 'Day and Time', name: 'day_time', widget: 'string', required: false, hint: 'This is where you can announce your Support Hours, shipping details or else. If you leave these fields empty, nothing will appear on the right side of your contact details.'}
 
   - name: 'sectionprivacypolicy'
     label: 'Privacy Policy page'
