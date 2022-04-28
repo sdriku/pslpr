@@ -124,7 +124,7 @@ collections:
     editor:
       preview: true
     files:
-      - name: 'englishhomepage'
+      - name: 'enhp'
         label: 'English Homepage Configuration'
         description: 'You can enable or disable + edit the many parts of your homepage. Only thing you cannot do is reorder these elements on the homepage as this is hard-coded. If you want to move around sections, contact me and provide the order of appearance for each section.'
         file: 'data/en/homepage.yml'
