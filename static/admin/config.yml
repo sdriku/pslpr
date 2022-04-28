@@ -78,7 +78,10 @@ collections:
     fields:
       - { label: 'Contact page SEO Title', name: 'title', widget: 'string', hint: 'This is your SEO title that may appear in Google search results.' }
       - { label: 'SEO Description', name: 'description', widget: 'string', hint: 'This is your SEO description + include keywords if possible, this may appear in Google search results.' }
-      - label: 'Office settings', name: 'office', widget: 'office', fields:
+      - label: 'Office settings'
+        name: 'office'
+        widget: 'office'
+        fields:
         - { label: 'Title', name: 'title', widget: 'string', hint: 'This is the Title that will appear on top of the Contact page'}
         - { label: 'Mobile', name: 'mobile', widget: 'string', required: false, hint: 'This is your mobile number, leave it empty and the field will disappear from the Contact page.'}
         - { label: 'email', name: 'email', widget: 'string', required: false, hint: 'This is your email address, leave it empty and the field will disappear from the Contact page.'}
