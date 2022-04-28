@@ -32,7 +32,7 @@ collections:
               - { label: 'Image', name: 'image', widget: 'image', hint: 'Chose an image to illustrate this section'}
               - label: 'Button'
                 name: 'button'
-                widget: 'button'
+                widget: 'object'
                 fields:
                   - { label: 'Enable', name: 'enable', widget: 'select', options: ["true", "false"], hint: 'Select true to activate the button on this section. Select false to make the button disappear.' }
                   - { label: 'Text on Button', name: 'label', widget: 'string', hint: 'Text appearing on the button, keep it short.'}
@@ -109,6 +109,7 @@ collections:
                   - { label: 'Name of reviewer', name: 'name', widget: 'string', hint: 'Type the name of the client providing the testimony.'}
                   - { label: 'Who is reviewer', name: 'designation', widget: 'string', required: false, hint: 'provide a few words presentation of this person if you want too. Leave it empty otherwise, this field is optional.'}
                   - { label: 'Picture of reviewer', name: 'image', widget: 'image', required: false, hint: 'I made this field optional, but reviews online are much more powerful if there is a picture of the reviewer. Testimony can still be fake, but with a picture potential clients can relate better.'}
+                  - { label: 'Review', name: 'content', widget: 'markdown', hint: 'This is where you can share the good reviews of your first clients.'}
 
   - name: 'productssection'
     label: 'Products Main Page'
