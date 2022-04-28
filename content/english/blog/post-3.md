@@ -1,8 +1,10 @@
 ---
 title: "Best Personalized Gift In Your Budget"
 date: 2019-10-17T11:22:16+06:00
-image: "wallet-3200387.jpg"
+image: "assets/img/12.jpg"
 description : "this is a meta description"
+weight: 3
+mainsection: false
 draft: false
 ---
 

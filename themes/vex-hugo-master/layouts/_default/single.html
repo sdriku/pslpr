@@ -5,8 +5,32 @@
     <div class="row">
       <div class="col-md-5 mb-4 mb-md-0">
         <div class="sticky-image">
-          <img class="img-fluid w-100" src="{{ .Params.image | absURL }}" alt="{{ .Title }}">
-        </div>
+          {{ $imagePath := printf "/%s" .Params.image }}
+          {{ $res := resources.Get $imagePath }}
+          {{- $ws := slice 200 300 500 -}}
+          {{- $srcset := slice -}}
+          {{- range $ws -}}
+          {{/* to avoid creating an image that is larger than the source */}}
+          {{- if (le . $res.Width) -}}
+          {{- $w := printf "%dx" . -}}
+          {{- $url := ($res.Resize $w).RelPermalink | safeURL -}}
+          {{- $fmt := printf "%s %dw" $url . -}}
+          {{- $srcset = $srcset | append $fmt -}}
+          {{- end -}}
+          {{- end -}}
+          {{- $set := delimit $srcset "," -}}
+          {{ with $res }}
+          <figure>
+          <img      
+          srcset="{{ $set }}"
+          sizes="(max-width: 699px) 80vw, (min-width: 700px) 40vw"
+          src="{{ $res.RelPermalink }}"
+          alt="{{ .Params.alt }}"
+          width="80%"
+          height="auto"/>
+              </figure>
+          {{ end }}
+         </div>
       </div>
       <div class="col-lg-6 col-md-7 offset-lg-1">
         <h1 class="mb-4">{{.Title | markdownify}}</h1>

@@ -23,7 +23,7 @@ canonifyURLs = true
 
 [module]
 [[module.mounts]]
-  source = "static/assets"
+  source = "static"
   target = "assets"
 [[module.mounts]]
   source = "static"
@@ -83,10 +83,10 @@ url = "contact/"
 weight = 5
 
 # footer menu
-[[menu.footer]]
-name = "Blog"
-url = "blog/"
-weight = 1
+#[[menu.footer]]
+#name = "Blog"
+#url = "blog/"
+#weight = 1
 
 [[menu.footer]]
 name = "Contact"

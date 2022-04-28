@@ -1,11 +1,18 @@
 ---
 title: "OnePlus Watch"
 date: 2019-10-17T11:22:16+06:00
+weight: 7
+mainimage: "assets/img/31.jpg"
 images: 
-  - "images/showcase/showcase-7.png"
-  - "images/showcase/showcase-5.png"
-  - "images/showcase/showcase-3.png"
-  - "images/showcase/showcase-4.png"
+  - "assets/img/31.jpg"
+  - "assets/img/32.jpg"
+  - "assets/img/33.jpg"
+  - "assets/img/34.jpg"
+
+# image loading speed on screen
+# type "eager" for your 4 products placed on top
+# type "lazy" for all following products
+loading: lazy
 
 # meta description
 description : "this is meta description"
@@ -21,6 +28,7 @@ sizes : ["small","medium","large"]
 # button link if you don't want to use snipcart. empty link will not show button
 button_link: "#"
 
+mainsection: false
 draft: false
 ---
 

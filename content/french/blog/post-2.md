@@ -1,8 +1,10 @@
 ---
 title: "Pourquoi acheter une boucle d'oreille fait-main."
 date: 2019-10-17T11:22:16+06:00
-image: "images/showcase/showcase-2.png"
+image: "assets/img/11.jpg"
 description : "this is a meta description"
+weight: 2
+mainsection: false
 draft: false
 ---
 

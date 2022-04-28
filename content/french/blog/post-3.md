@@ -1,8 +1,10 @@
 ---
 title: "Meilleur cadeau personnalisé dans votre budget"
 date: 2019-10-17T11:22:16+06:00
-image: "img/PireSiteWebDuMonde-w640.png"
+image: "assets/img/12.jpg"
 description : "this is a meta description"
+weight: 3
+mainsection: false
 draft: false
 ---
 

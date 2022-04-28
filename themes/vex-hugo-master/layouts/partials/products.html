@@ -17,9 +17,11 @@
                 <i class="tf-ion-plus-round"></i>
               </a>
             </div>
-            <img class="img-fluid" src="{{range first 1 .Params.images}}{{.|absURL}}{{end}}" alt="{{.Title}}">
+            {{ $imagePath := printf "/%s" .Params.mainimage }}
+            {{ $res := resources.Get $imagePath }}
+            <img loading="{{ .Params.loading }}" class="img-fluid" src="{{ with $res }}{{ ($res.Fill "200x400").RelPermalink }}{{end}}" alt="{{.Title}}">
           </div>
-          {{ end }}
+            {{ end }}
         </div>
       </div>
     </div>

@@ -11,7 +11,31 @@
     {{- if ne (mod $index 2) 1 }}
     <div class="row mb-40">
       <div class="col-md-6 text-center mb-5 mb-lg-0">
-        <img class="img-fluid" src="{{ .Params.image | absURL }}" alt="">
+        {{ $imagePath := printf "/%s" .Params.image }}
+        {{ $res := resources.Get $imagePath }}
+        {{- $ws := slice 200 300 500 -}}
+        {{- $srcset := slice -}}
+        {{- range $ws -}}
+        {{/* to avoid creating an image that is larger than the source */}}
+        {{- if (le . $res.Width) -}}
+        {{- $w := printf "%dx" . -}}
+        {{- $url := ($res.Resize $w).RelPermalink | safeURL -}}
+        {{- $fmt := printf "%s %dw" $url . -}}
+        {{- $srcset = $srcset | append $fmt -}}
+        {{- end -}}
+        {{- end -}}
+        {{- $set := delimit $srcset "," -}}
+        {{ with $res }}
+        <figure>
+        <img      
+        srcset="{{ $set }}"
+        sizes="(max-width: 699px) 80vw, (min-width: 700px) 40vw"
+        src="{{ $res.RelPermalink }}"
+        alt="{{ .Params.alt }}"
+        width="80%"
+        height="auto"/>
+            </figure>
+        {{ end }}
       </div>
       <div class="col-md-6 align-self-center text-center text-md-left">
         <div class="content">
@@ -31,7 +55,31 @@
         </div>
       </div>
       <div class="col-md-6 order-md-2 order-1 text-center mb-5 mb-lg-0">
-        <img class="img-fluid" src="{{ .Params.image | absURL }}" alt="">
+        {{ $imagePath := printf "/%s" .Params.image }}
+        {{ $res := resources.Get $imagePath }}
+        {{- $ws := slice 200 300 500 -}}
+        {{- $srcset := slice -}}
+        {{- range $ws -}}
+        {{/* to avoid creating an image that is larger than the source */}}
+        {{- if (le . $res.Width) -}}
+        {{- $w := printf "%dx" . -}}
+        {{- $url := ($res.Resize $w).RelPermalink | safeURL -}}
+        {{- $fmt := printf "%s %dw" $url . -}}
+        {{- $srcset = $srcset | append $fmt -}}
+        {{- end -}}
+        {{- end -}}
+        {{- $set := delimit $srcset "," -}}
+        {{ with $res }}
+        <figure>
+        <img    
+        srcset="{{ $set }}"
+        sizes="(max-width: 699px) 80vw, (min-width: 700px) 40vw"
+        src="{{ $res.RelPermalink }}"
+        alt="{{ .Params.alt }}"
+        width="80%"
+        height="auto"/>
+        </figure>
+        {{ end }}
       </div>
     </div>
     {{ end }}

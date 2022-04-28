@@ -1,8 +1,10 @@
 ---
 title: "How to choose the right gift."
 date: 2019-10-17T11:22:16+06:00
-image: img/PireSiteWebDuMonde-w640.png
+image: "assets/img/10.jpg"
 description : "this is a meta description"
+weight: 1
+mainsection: false
 draft: false
 ---
 
