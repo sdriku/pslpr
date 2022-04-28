@@ -23,7 +23,7 @@ collections:
         fields:
           - label: 'Banner Settings'
             name: 'banner'
-            widget: 'banner'
+            widget: 'object'
             fields:
               - { label: 'Enable', name: 'enable', widget: 'select', options: ["true", "false"], hint: 'Select true to activate the section on the homepage. Select false to make the section disappear.' }
               - { label: 'Headline', name: 'title', widget: 'string', required: false, hint: 'This is the main headline for this section of your homepage, appearing in bold. I made this field optional in case you are fine with having just text but no headline above.' }
@@ -38,7 +38,7 @@ collections:
 
           - label: 'Feature Settings'
             name: 'features'
-            widget: 'features'
+            widget: 'object'
             fields:
               - { label: 'Enable', name: 'enable', widget: 'select', options: ["true", "false"], hint: 'Select true to activate the section on the homepage. Select false to make the section disappear.' }
               - { label: 'Headline', name: 'title', widget: 'string', hint: 'This is the main headline for this section of your homepage, appearing in bold.' }
@@ -73,14 +73,14 @@ collections:
 
           - label: 'Products Settings'
             name: 'products'
-            widget: 'products'
+            widget: 'object'
             fields:
               - { label: 'Enable', name: 'enable', widget: 'select', options: ["true", "false"], hint: 'Select true to activate the section on the homepage. Select false to make the section disappear.'}
               - { label: 'Headline', name: 'title', widget: 'string', hint: 'This is the main headline for this section of your homepage, appearing in bold.'}
 
           - label: 'Subscription Settings'
             name: 'subscription'
-            widget: 'subscription'
+            widget: 'object'
             fields:
               - { label: 'Enable', name: 'enable', widget: 'select', options: ["true", "false"], hint: 'Select true to activate the section on the homepage. Select false to make the section disappear.'}
               - { label: 'Image', name: 'image', widget: 'image', hint: 'Chose an image to illustrate this section'}
@@ -90,7 +90,7 @@ collections:
 
           - label: 'Testimonial Settings'
             name: 'testimonial'
-            widget: 'testimonial'
+            widget: 'object'
             fields:
               - { label: 'Enable', name: 'enable', widget: 'select', options: ["true", "false"], hint: 'Select true to activate the section on the homepage. Select false to make the section disappear.' }
               - { label: 'Headline', name: 'title', widget: 'string', hint: 'This is the main headline for this section of your homepage, appearing in bold.'}
