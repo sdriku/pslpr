@@ -61,7 +61,7 @@ collections:
       - { label: 'Product order', name: 'weight', widget: 'number', hint: 'This is where you reorganize the order in which your products appear on your page. 1 will apear 1st, 2 will be 2nd etc.'}
       - { label: 'Main picture', name: 'mainimage', widget: 'image', hint: 'This is the main picture of your product, the one clients can see from the Products Main Page' }
       - { label: 'Image loading speed', name: 'loading', widget: 'select', options: ["lazy", "eager"], hint: 'Choose "eager" for the 4 products placed on top of your page + choose "lazy" for all following products. That way images of products number 5 and beyond will load ONLY when client scrolls the page. This will help a lot with the Website Speed and SEO Performance.' }
-      - { label: 'Other Pictures', name: 'images', widget: 'list', summary: {{fields.image}}, field: {label: Image, name: image, widget: image}, hint: 'Add up to 3 more pìcture of your article, so clients can see it from different angles' }
+      - { label: 'Other Pictures', name: 'images', widget: 'list', summary: '{{fields.image}}', field: {label: Image, name: image, widget: image}, hint: 'Add up to 3 more pìcture of your article, so clients can see it from different angles' }
       - { label: 'Price', name: 'price', widget: 'number', hint: 'Price of your product' }
       - { label: 'Discount Price', name: 'discount_price', widget: 'number', hint: 'Price of your product' }
       - { label: 'Colors', name: 'colors', widget: 'select', multiple: true, options: ["black", "white", "gray"], hint: 'Colors of your product' }
