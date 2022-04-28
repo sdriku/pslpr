@@ -12,95 +12,97 @@ public_folder: assets/img
 collections:
   - name: 'homepage'
     label: 'Homepage Configuration'
-    description: 'You can enable or disable + edit the many parts of your homepage. Only thing you cannot do is reorder these elements on the homepage as this is hard-coded. If you want to move around sections, contact me and provide the order of appearance for each section.'
-    folder: 'data/en'
-    create: false
-    delete: false
-    editor:
-      preview: true
-    fields:
-      - label: 'Banner Settings'
-        name: 'banner'
-        widget: 'banner'
+    files:
+      - name: 'englishomepage'
+        label: 'English Homepage'
+        description: 'You can enable or disable + edit the many parts of your homepage. Only thing you cannot do is reorder these elements on the homepage as this is hard-coded. If you want to move around sections, contact me and provide the order of appearance for each section.'
+        file: 'data/en/homepage.yml'
+        delete: false
+        editor:
+          preview: true
         fields:
-          - { label: 'Enable', name: 'enable', widget: 'select', options: ["true", "false"], hint: 'Select true to activate the section on the homepage. Select false to make the section disappear.' }
-          - { label: 'Headline', name: 'title', widget: 'string', required: false, hint: 'This is the main headline for this section of your homepage, appearing in bold. I made this field optional in case you are fine with having just text but no headline above.' }
-          - { label: 'Content', name: 'content', widget: 'string', required: false, hint: 'This is the text that appears below your headline. I made this field optional in case you are fine with having a headline without text below.'}
-          - { label: 'Image', name: 'image', widget: 'image', hint: 'Chose an image to illustrate this section'}
-          - label: 'Button'
-            name: 'button'
-            widget: 'button'
+          - label: 'Banner Settings'
+            name: 'banner'
+            widget: 'banner'
             fields:
-              - { label: 'Enable', name: 'enable', widget: 'select', options: ["true", "false"], hint: 'Select true to activate the button on this section. Select false to make the button disappear.' }
-              - { label: 'Text on Button', name: 'label', widget: 'string', hint: 'Text appearing on the button, keep it short.'}
+              - { label: 'Enable', name: 'enable', widget: 'select', options: ["true", "false"], hint: 'Select true to activate the section on the homepage. Select false to make the section disappear.' }
+              - { label: 'Headline', name: 'title', widget: 'string', required: false, hint: 'This is the main headline for this section of your homepage, appearing in bold. I made this field optional in case you are fine with having just text but no headline above.' }
+              - { label: 'Content', name: 'content', widget: 'string', required: false, hint: 'This is the text that appears below your headline. I made this field optional in case you are fine with having a headline without text below.'}
+              - { label: 'Image', name: 'image', widget: 'image', hint: 'Chose an image to illustrate this section'}
+              - label: 'Button'
+                name: 'button'
+                widget: 'button'
+                fields:
+                  - { label: 'Enable', name: 'enable', widget: 'select', options: ["true", "false"], hint: 'Select true to activate the button on this section. Select false to make the button disappear.' }
+                  - { label: 'Text on Button', name: 'label', widget: 'string', hint: 'Text appearing on the button, keep it short.'}
 
-      - label: 'Feature Settings'
-        name: 'features'
-        widget: 'features'
-        fields:
-          - { label: 'Enable', name: 'enable', widget: 'select', options: ["true", "false"], hint: 'Select true to activate the section on the homepage. Select false to make the section disappear.' }
-          - { label: 'Headline', name: 'title', widget: 'string', hint: 'This is the main headline for this section of your homepage, appearing in bold.' }
-          - { label: 'Image', name: 'image', widget: 'image', hint: 'Chose an image to illustrate this section'}
-          - label: 'Left-side features'
-            name: 'left_side'
-            widget: 'list'
-            allow_add: false
-            summary: '{{fields.title}} - {{fields.icon}} - {{field.content}}'
+          - label: 'Feature Settings'
+            name: 'features'
+            widget: 'features'
             fields:
-              - { label: 'Feature 1 Title', name: 'title', widget: 'string', hint: 'Name of this feature'}
-              - { label: 'Icon', name: 'icon', widget: 'image', required: false, hint: 'Find an icon that comes with your feature. Icons are nice as they complement well the designs, and clients like visuals. You can find plenty of icons online. I have a plan with icons8, find your icons there even if they are not free, send me the link and I will upload them on your page. All this is only if you like icons, I make this field optional.'}
-              - { label: 'Text', name: 'content', widget: 'string', required: false, hint: 'This is the text that appears below the logo (or the Feature title if no logo). I made this field optional in case you are fine with having a title and or icon without text below.'}
-          - label: 'Right-side features'
-            name: 'right_side'
-            widget: 'list'
-            allow_add: false
-            summary: '{{fields.title}} - {{fields.icon}} - {{field.content}}'
+              - { label: 'Enable', name: 'enable', widget: 'select', options: ["true", "false"], hint: 'Select true to activate the section on the homepage. Select false to make the section disappear.' }
+              - { label: 'Headline', name: 'title', widget: 'string', hint: 'This is the main headline for this section of your homepage, appearing in bold.' }
+              - { label: 'Image', name: 'image', widget: 'image', hint: 'Chose an image to illustrate this section'}
+              - label: 'Left-side features'
+                name: 'left_side'
+                widget: 'list'
+                allow_add: false
+                summary: '{{fields.title}} - {{fields.icon}} - {{field.content}}'
+                fields:
+                  - { label: 'Feature 1 Title', name: 'title', widget: 'string', hint: 'Name of this feature'}
+                  - { label: 'Icon', name: 'icon', widget: 'image', required: false, hint: 'Find an icon that comes with your feature. Icons are nice as they complement well the designs, and clients like visuals. You can find plenty of icons online. I have a plan with icons8, find your icons there even if they are not free, send me the link and I will upload them on your page. All this is only if you like icons, I make this field optional.'}
+                  - { label: 'Text', name: 'content', widget: 'string', required: false, hint: 'This is the text that appears below the logo (or the Feature title if no logo). I made this field optional in case you are fine with having a title and or icon without text below.'}
+              - label: 'Right-side features'
+                name: 'right_side'
+                widget: 'list'
+                allow_add: false
+                summary: '{{fields.title}} - {{fields.icon}} - {{field.content}}'
+                fields:
+                  - { label: 'Feature Title', name: 'title', widget: 'string', hint: 'Name of this feature'}
+                  - { label: 'Icon', name: 'icon', widget: 'image', required: false, hint: 'Find an icon that comes with your feature. Icons are nice as they complement well the designs, and clients like visuals. You can find plenty of icons online. I have a plan with icons8, find your icons there even if they are not free, send me the link and I will upload them on your page. All this is only if you like icons, I make this field optional.'}
+                  - { label: 'Text', name: 'content', widget: 'string', required: false, hint: 'This is the text that appears below the logo (or the Feature title if no logo). I made this field optional in case you are fine with having a title and or icon without text below.'}
+
+          - label: 'Promo Settings'
+            name: 'promo'
+            widget: 'object'
             fields:
-              - { label: 'Feature Title', name: 'title', widget: 'string', hint: 'Name of this feature'}
-              - { label: 'Icon', name: 'icon', widget: 'image', required: false, hint: 'Find an icon that comes with your feature. Icons are nice as they complement well the designs, and clients like visuals. You can find plenty of icons online. I have a plan with icons8, find your icons there even if they are not free, send me the link and I will upload them on your page. All this is only if you like icons, I make this field optional.'}
-              - { label: 'Text', name: 'content', widget: 'string', required: false, hint: 'This is the text that appears below the logo (or the Feature title if no logo). I made this field optional in case you are fine with having a title and or icon without text below.'}
+              - { label: 'Enable', name: 'enable', widget: 'select', options: ["true", "false"], hint: 'Select true to activate the section on the homepage. Select false to make the section disappear.' }
+              - { label: 'Image', name: 'image', widget: 'image', hint: 'Chose an image to illustrate this section'}
+              - { label: 'Headline', name: 'title', widget: 'string', required: false, hint: 'This is the main headline for this section of your homepage, appearing in bold. I made this field optional in case you are fine with having just text but no headline above.' }
+              - { label: 'Content', name: 'content', widget: 'string', required: false, hint: 'This is the text that appears below your headline. I made this field optional in case you are fine with having a headline without text below.'}
 
-      - label: 'Promo Settings'
-        name: 'promo'
-        widget: 'object'
-        fields:
-          - { label: 'Enable', name: 'enable', widget: 'select', options: ["true", "false"], hint: 'Select true to activate the section on the homepage. Select false to make the section disappear.' }
-          - { label: 'Image', name: 'image', widget: 'image', hint: 'Chose an image to illustrate this section'}
-          - { label: 'Headline', name: 'title', widget: 'string', required: false, hint: 'This is the main headline for this section of your homepage, appearing in bold. I made this field optional in case you are fine with having just text but no headline above.' }
-          - { label: 'Content', name: 'content', widget: 'string', required: false, hint: 'This is the text that appears below your headline. I made this field optional in case you are fine with having a headline without text below.'}
-
-      - label: 'Products Settings'
-        name: 'products'
-        widget: 'products'
-        fields:
-          - { label: 'Enable', name: 'enable', widget: 'select', options: ["true", "false"], hint: 'Select true to activate the section on the homepage. Select false to make the section disappear.'}
-          - { label: 'Headline', name: 'title', widget: 'string', hint: 'This is the main headline for this section of your homepage, appearing in bold.'}
-
-      - label: 'Subscription Settings'
-        name: 'subscription'
-        widget: 'subscription'
-        fields:
-          - { label: 'Enable', name: 'enable', widget: 'select', options: ["true", "false"], hint: 'Select true to activate the section on the homepage. Select false to make the section disappear.'}
-          - { label: 'Image', name: 'image', widget: 'image', hint: 'Chose an image to illustrate this section'}
-          - { label: 'Headline', name: 'title', widget: 'string', required: false, hint: 'This is the main headline for this section of your homepage, appearing in bold. I made this field optional in case you are fine with having just text but no headline above.'}
-          - { label: 'Content', name: 'content', widget: 'string', required: false, hint: 'This is the text that appears below your headline. I made this field optional in case you are fine with having a headline without text below.'}
-          - { label: "Text inside field", name: 'placeholder', widget: 'string', hint: 'Default to Your Email Address Here, but you can formulate it as you like.'}
-
-      - label: 'Testimonial Settings'
-        name: 'testimonial'
-        widget: 'testimonial'
-        fields:
-          - { label: 'Enable', name: 'enable', widget: 'select', options: ["true", "false"], hint: 'Select true to activate the section on the homepage. Select false to make the section disappear.' }
-          - { label: 'Headline', name: 'title', widget: 'string', hint: 'This is the main headline for this section of your homepage, appearing in bold.'}
-          - label: 'Testimonial list'
-            name: 'testimonial_item'
-            widget: 'list'
-            allow_add: true
-            summary: '{{fields.name}} - {{fields.designation}} - {{field.image}} - {{field.content}}'
+          - label: 'Products Settings'
+            name: 'products'
+            widget: 'products'
             fields:
-              - { label: 'Name of reviewer', name: 'name', widget: 'string', hint: 'Type the name of the client providing the testimony.'}
-              - { label: 'Who is reviewer', name: 'designation', widget: 'string', required: false, hint: 'provide a few words presentation of this person if you want too. Leave it empty otherwise, this field is optional.'}
-              - { label: 'Picture of reviewer', name: 'image', widget: 'image', required: false, hint: 'I made this field optional, but reviews online are much more powerful if there is a picture of the reviewer. Testimony can still be fake, but with a picture potential clients can relate better.'}
+              - { label: 'Enable', name: 'enable', widget: 'select', options: ["true", "false"], hint: 'Select true to activate the section on the homepage. Select false to make the section disappear.'}
+              - { label: 'Headline', name: 'title', widget: 'string', hint: 'This is the main headline for this section of your homepage, appearing in bold.'}
+
+          - label: 'Subscription Settings'
+            name: 'subscription'
+            widget: 'subscription'
+            fields:
+              - { label: 'Enable', name: 'enable', widget: 'select', options: ["true", "false"], hint: 'Select true to activate the section on the homepage. Select false to make the section disappear.'}
+              - { label: 'Image', name: 'image', widget: 'image', hint: 'Chose an image to illustrate this section'}
+              - { label: 'Headline', name: 'title', widget: 'string', required: false, hint: 'This is the main headline for this section of your homepage, appearing in bold. I made this field optional in case you are fine with having just text but no headline above.'}
+              - { label: 'Content', name: 'content', widget: 'string', required: false, hint: 'This is the text that appears below your headline. I made this field optional in case you are fine with having a headline without text below.'}
+              - { label: "Text inside field", name: 'placeholder', widget: 'string', hint: 'Default to Your Email Address Here, but you can formulate it as you like.'}
+
+          - label: 'Testimonial Settings'
+            name: 'testimonial'
+            widget: 'testimonial'
+            fields:
+              - { label: 'Enable', name: 'enable', widget: 'select', options: ["true", "false"], hint: 'Select true to activate the section on the homepage. Select false to make the section disappear.' }
+              - { label: 'Headline', name: 'title', widget: 'string', hint: 'This is the main headline for this section of your homepage, appearing in bold.'}
+              - label: 'Testimonial list'
+                name: 'testimonial_item'
+                widget: 'list'
+                allow_add: true
+                summary: '{{fields.name}} - {{fields.designation}} - {{field.image}} - {{field.content}}'
+                fields:
+                  - { label: 'Name of reviewer', name: 'name', widget: 'string', hint: 'Type the name of the client providing the testimony.'}
+                  - { label: 'Who is reviewer', name: 'designation', widget: 'string', required: false, hint: 'provide a few words presentation of this person if you want too. Leave it empty otherwise, this field is optional.'}
+                  - { label: 'Picture of reviewer', name: 'image', widget: 'image', required: false, hint: 'I made this field optional, but reviews online are much more powerful if there is a picture of the reviewer. Testimony can still be fake, but with a picture potential clients can relate better.'}
 
   - name: 'productssection'
     label: 'Products Main Page'
@@ -172,7 +174,6 @@ collections:
       - { label: 'SEO Description', name: 'description', widget: 'string', hint: 'This is your SEO description + include keywords if possible, this may appear in Google search results.' }
       - label: 'Office settings'
         name: 'office'
-        description: 'Here is the section where you can mention your contact details.'
         widget: 'object'
         fields:
         - { label: 'Title', name: 'title', widget: 'string', hint: 'This is the Title that will appear on top of the Contact page'}
@@ -182,7 +183,6 @@ collections:
         - { label: 'Content', name: 'content', widget: 'string', hint: 'This is the content that will appear just below your contact details.'}
       - label: 'Opening Hours'
         name: 'opening_hour'
-        description: 'This section is optional. If you leave it empty, nothing will appear on the website. Otherwise you can use it to mention Shipping, Support, Refund Policy etc..'
         widget: 'object'
         fields:
         - { label: 'Title', name: 'title', widget: 'string', required: false, hint: 'This is the Title that might appear on the right side of your Contact details. It was designed for Opening Hours but your can do whatever you want with it really (Shipping, Support hours..). If you leave these fields empty, nothing will appear on the right side of your contact details.'}
