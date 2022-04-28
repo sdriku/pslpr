@@ -61,7 +61,7 @@ collections:
       - { label: 'Product order', name: 'weight', widget: 'number', hint: 'This is where you reorganize the order in which your products appear on your page. 1 will apear 1st, 2 will be 2nd etc.'}
       - { label: 'Main picture', name: 'mainimage', widget: 'image', hint: 'This is the main picture of your product, the one clients can see from the Products Main Page' }
       - { label: 'Image loading speed', name: 'loading', widget: 'select', options: ["lazy", "eager"], hint: 'Choose "eager" for the 4 products placed on top of your page + choose "lazy" for all following products. That way images of products number 5 and beyond will load ONLY when client scrolls the page. This will help a lot with the Website Speed and SEO Performance.' }
-      - { label: 'Other Pictures', name: 'images', widget: 'image', hint: 'Add up to 3 more pìcture of your article, so clients can see it from different angles' }
+      - { label: 'Other Pictures', name: 'images', widget: 'list', summary: {{fields.image}}, field: {label: Image, name: image, widget: image}, hint: 'Add up to 3 more pìcture of your article, so clients can see it from different angles' }
       - { label: 'Price', name: 'price', widget: 'number', hint: 'Price of your product' }
       - { label: 'Discount Price', name: 'discount_price', widget: 'number', hint: 'Price of your product' }
       - { label: 'Colors', name: 'colors', widget: 'select', multiple: true, options: ["black", "white", "gray"], hint: 'Colors of your product' }
@@ -151,31 +151,22 @@ collections:
           - { label: 'Image', name: 'image', widget: 'image', hint: 'Chose an image to illustrate this section'}
           - label: 'Left-side features'
             name: 'left_side'
-            widget: 'left_side'
+            widget: 'list'
+            allow_add: false
+            summary: '{{fields.title}} - {{fields.icon}} - {{field.content}}'
             fields:
               - { label: 'Feature 1 Title', name: 'title', widget: 'string', hint: 'Name of this feature'}
               - { label: 'Icon', name: 'icon', widget: 'image', required: false, hint: 'Find an icon that comes with your feature. Icons are nice as they complement well the designs, and clients like visuals. You can find plenty of icons online. I have a plan with icons8, find your icons there even if they are not free, send me the link and I will upload them on your page. All this is only if you like icons, I make this field optional.'}
               - { label: 'Text', name: 'content', widget: 'string', required: false, hint: 'This is the text that appears below the logo (or the Feature title if no logo). I made this field optional in case you are fine with having a title and or icon without text below.'}
-              - { label: 'Feature 2 Title', name: 'title', widget: 'string', hint: 'Name of this feature'}
-              - { label: 'Icon', name: 'icon', widget: 'image', required: false, hint: 'Find an icon that comes with your feature. Icons are nice as they complement well the designs, and clients like visuals. You can find plenty of icons online. I have a plan with icons8, find your icons there even if they are not free, send me the link and I will upload them on your page. All this is only if you like icons, I make this field optional.'}
-              - { label: 'Text', name: 'content', widget: 'string', required: false, hint: 'This is the text that appears below the logo (or the Feature title if no logo). I made this field optional in case you are fine with having a title and or icon without text below.'}
-              - { label: 'Feature 3 Title', name: 'title', widget: 'string', hint: 'Name of this feature'}
-              - { label: 'Icon', name: 'icon', widget: 'image', required: false, hint: 'Find an icon that comes with your feature. Icons are nice as they complement well the designs, and clients like visuals. You can find plenty of icons online. I have a plan with icons8, find your icons there even if they are not free, send me the link and I will upload them on your page. All this is only if you like icons, I make this field optional.'}
-              - { label: 'Text', name: 'content', widget: 'string', required: false, hint: 'This is the text that appears below the logo (or the Feature title if no logo). I made this field optional in case you are fine with having a title and or icon without text below.'}
           - label: 'Right-side features'
             name: 'right_side'
-            widget: 'right_side'
+            widget: 'list'
+            allow_add: false
+            summary: '{{fields.title}} - {{fields.icon}} - {{field.content}}'
             fields:
-              - { label: 'Feature 4 Title', name: 'title', widget: 'string', hint: 'Name of this feature'}
+              - { label: 'Feature Title', name: 'title', widget: 'string', hint: 'Name of this feature'}
               - { label: 'Icon', name: 'icon', widget: 'image', required: false, hint: 'Find an icon that comes with your feature. Icons are nice as they complement well the designs, and clients like visuals. You can find plenty of icons online. I have a plan with icons8, find your icons there even if they are not free, send me the link and I will upload them on your page. All this is only if you like icons, I make this field optional.'}
               - { label: 'Text', name: 'content', widget: 'string', required: false, hint: 'This is the text that appears below the logo (or the Feature title if no logo). I made this field optional in case you are fine with having a title and or icon without text below.'}
-              - { label: 'Feature 5 Title', name: 'title', widget: 'string', hint: 'Name of this feature'}
-              - { label: 'Icon', name: 'icon', widget: 'image', required: false, hint: 'Find an icon that comes with your feature. Icons are nice as they complement well the designs, and clients like visuals. You can find plenty of icons online. I have a plan with icons8, find your icons there even if they are not free, send me the link and I will upload them on your page. All this is only if you like icons, I make this field optional.'}
-              - { label: 'Text', name: 'content', widget: 'string', required: false, hint: 'This is the text that appears below the logo (or the Feature title if no logo). I made this field optional in case you are fine with having a title and or icon without text below.'}
-              - { label: 'Feature 6 Title', name: 'title', widget: 'string', hint: 'Name of this feature'}
-              - { label: 'Icon', name: 'icon', widget: 'image', required: false, hint: 'Find an icon that comes with your feature. Icons are nice as they complement well the designs, and clients like visuals. You can find plenty of icons online. I have a plan with icons8, find your icons there even if they are not free, send me the link and I will upload them on your page. All this is only if you like icons, I make this field optional.'}
-              - { label: 'Text', name: 'content', widget: 'string', required: false, hint: 'This is the text that appears below the logo (or the Feature title if no logo). I made this field optional in case you are fine with having a title and or icon without text below.'}
-
 
       - label: 'Promo Settings'
         name: 'promo'
@@ -211,15 +202,10 @@ collections:
           - { label: 'Headline', name: 'title', widget: 'string', hint: 'This is the main headline for this section of your homepage, appearing in bold.'}
           - label: 'Testimonial list'
             name: 'testimonial_item'
-            widget: 'testimonial_item'
+            widget: 'list'
+            allow_add: true
+            summary: '{{fields.name}} - {{fields.designation}} - {{field.image}} - {{field.content}}'
             fields:
-              - { label: 'Name of the reviewer', name: 'name', widget: 'string', hint: 'Type the name of the client providing the testimony.'}
-              - { label: 'Who is the reviewer', name: 'designation', widget: 'string', required: false, hint: 'provide a few words presentation of this person if you want too. Leave it empty otherwise, this field is optional.'}
-              - { label: 'Picture of the reviewer', name: 'image', widget: 'image', required: false, hint: 'I made this field optional, but reviews online are much more powerful if there is a picture of the reviewer. Testimony can still be fake, but with a picture potential clients can relate better.'}
-              - { label: 'Name of the reviewer', name: 'name', widget: 'string', hint: 'Type the name of the client providing the testimony.'}
-              - { label: 'Who is the reviewer', name: 'designation', widget: 'string', required: false, hint: 'provide a few words presentation of this person if you want too. Leave it empty otherwise, this field is optional.'}
-              - { label: 'Picture of the reviewer', name: 'image', widget: 'image', required: false, hint: 'I made this field optional, but reviews online are much more powerful if there is a picture of the reviewer. Testimony can still be fake, but with a picture potential clients can relate better.'}
-              - { label: 'Name of the reviewer', name: 'name', widget: 'string', hint: 'Type the name of the client providing the testimony.'}
-              - { label: 'Who is the reviewer', name: 'designation', widget: 'string', required: false, hint: 'provide a few words presentation of this person if you want too. Leave it empty otherwise, this field is optional.'}
-              - { label: 'Picture of the reviewer', name: 'image', widget: 'image', required: false, hint: 'I made this field optional, but reviews online are much more powerful if there is a picture of the reviewer. Testimony can still be fake, but with a picture potential clients can relate better.'}
-
+              - { label: 'Name of reviewer', name: 'name', widget: 'string', hint: 'Type the name of the client providing the testimony.'}
+              - { label: 'Who is reviewer', name: 'designation', widget: 'string', required: false, hint: 'provide a few words presentation of this person if you want too. Leave it empty otherwise, this field is optional.'}
+              - { label: 'Picture of reviewer', name: 'image', widget: 'image', required: false, hint: 'I made this field optional, but reviews online are much more powerful if there is a picture of the reviewer. Testimony can still be fake, but with a picture potential clients can relate better.'}
