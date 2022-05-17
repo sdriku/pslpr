@@ -1,97 +1,84 @@
-############################# banner ############################
 banner:
-  enable: true
-  title: "Believe in Technology, Make the change"
-  content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas, modi fugit in veritatis labore perferendis. Minima hic at, nostrum nihil!"
-  image: "images/watch.png"
+  enable: "true"
+  title: Treat someone special to a personalised gift for any occasion! Whatever
+    your budget is, we've got amazing gifts.
+  content: "PS Laser Printing is a family business located in the beautiful Mourne
+    area in Northern Ireland. These days everything looks the same and we wanted
+    to make sure that you have the option to bring your touch to any gift you
+    want because we know that the person you are buying it for is worth it. We
+    offer not only a 'fixed design' but also a 'bespoke' design where we create
+    something unique only for you. "
+  image: images/watch.png
   button:
     enable: true
-    label: "Browse All Products"
-    link: "products/"
-
-############################# Feature ############################
+    label: Browse All Products
+    link: products/
 features:
   enable: true
-  title: "Our Core Features"
-  image: "images/watch-2.png"
-
-  # feature at the left of the image
+  title: Why PS Laser printing?
+  image: images/watch-2.png
   left_side:
-    # feature item loop
-    - title: "Smooth Touch"
-      icon: "tf-ion-ios-alarm-outline"
-      content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, inventore?"
-
-      # feature item loop
-    - title: "Elegant Design"
-      icon: "tf-ion-ios-bell-outline"
-      content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, inventore?"
-
-      # feature item loop
-    - title: "Easy Pricing"
-      icon: "tf-ion-ios-cart-outline"
-      content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, inventore?"
-
-  # feature at the right of the image
-  right_side:
-     # feature item loop
-    - title: "Smooth Touch"
-      icon: "tf-ion-ios-alarm-outline"
-      content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, inventore?"
-
-  # feature item loop
-    - title: "Elegant Design"
-      icon: "tf-ion-ios-bell-outline"
-      content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, inventore?"
-
-  # feature item loop
-    - title: "Easy Pricing"
-      icon: "tf-ion-ios-cart-outline"
-      content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, inventore?"
-      
-############################# promo ############################
+    - title: Sustainability
+      icon: tf-ion-ios-alarm-outline
+      content: Our products are mainly made from Poplar, a cultivated wood that grows
+        quickly, which makes it a very sustainable product. This material is
+        PEFC certified.
+    - title: Personalised
+      icon: tf-ion-ios-bell-outline
+      content: In addition. most of our items can be personalised (name, logo,
+        quote...)..
+    - title: Customer service
+      icon: tf-ion-ios-cart-outline
+      content: All queries are dealt by the maker of the product, working hard for the
+        customer satisfaction.
+  right_side: []
 promo:
-  enable: false
-  image: "images/watch.png"
-  title: "Designed by professional , the benefit for creative gigs"
-  content:
-    "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia vel labore, deleniti minima
-    nisi, velit atque quaerat impedit ea maxime sunt accusamus at obcaecati dolor iure iusto omnis quis eum.
-    <br><br>
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis commodi odit, illo, qui aliquam dol"
-
-#################################### Products ########################
+  enable: "false"
+  image: images/watch.png
+  title: Designed by professional , the benefit for creative gigs
+  content: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia vel
+    labore, deleniti minima nisi, velit atque quaerat impedit ea maxime sunt
+    accusamus at obcaecati dolor iure iusto omnis quis eum. <br><br> Lorem ipsum
+    dolor sit amet, consectetur adipisicing elit. Facilis commodi odit, illo,
+    qui aliquam dol
 products:
-  enable: true
-  title: "Checkout Our All Products"
-
-################################## Subscription ###################
+  enable: "true"
+  title: Gallery
 subscription:
-  enable: true
-  bg_image: "images/call-to-action.jpg"
-  title: "Get Product Updates"
-  content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod"
-  placeholder: "Your Email Address Here"
-
-############################## Testimonial ##########################
+  enable: "false"
+  bg_image: images/call-to-action.jpg
+  title: Get Product Updates
+  content: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+  placeholder: Your Email Address Here
+  image: assets/img/10.jpg
 testimonial:
   enable: true
-  title: "Watch Review"
+  title: Watch Review
   testimonial_item:
-    # testimonial item loop
-    - name: "Jonathon Andrew"
-      designation: "CEO, Themefisher"
-      image: "images/avater.png"
-      content: "A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents."
-
-    # testimonial item loop
-    - name: "Jonathon Andrew"
-      designation: "CEO, Themefisher"
-      image: "images/avater.png"
-      content: "A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents."
-
-    # testimonial item loop
-    - name: "Jonathon Andrew"
-      designation: "CEO, Themefisher"
-      image: "images/avater.png"
-      content: "A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents."
+    - name: Jonathon Andrew
+      designation: CEO, Themefisher
+      image: images/avater.png
+      content: A wonderful serenity has taken possession of my entire soul, like these
+        sweet mornings of spring which I enjoy with my whole heart. I am alone,
+        and feel the charm of existence in this spot, which was created for the
+        bliss of souls like mine. I am so happy, my dear friend, so absorbed in
+        the exquisite sense of mere tranquil existence, that I neglect my
+        talents.
+    - name: Jonathon Andrew
+      designation: CEO, Themefisher
+      image: images/avater.png
+      content: A wonderful serenity has taken possession of my entire soul, like these
+        sweet mornings of spring which I enjoy with my whole heart. I am alone,
+        and feel the charm of existence in this spot, which was created for the
+        bliss of souls like mine. I am so happy, my dear friend, so absorbed in
+        the exquisite sense of mere tranquil existence, that I neglect my
+        talents.
+    - name: Jonathon Andrew
+      designation: CEO, Themefisher
+      image: images/avater.png
+      content: A wonderful serenity has taken possession of my entire soul, like these
+        sweet mornings of spring which I enjoy with my whole heart. I am alone,
+        and feel the charm of existence in this spot, which was created for the
+        bliss of souls like mine. I am so happy, my dear friend, so absorbed in
+        the exquisite sense of mere tranquil existence, that I neglect my
+        talents.
