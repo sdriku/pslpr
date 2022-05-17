@@ -13,8 +13,6 @@ disableLanguages = ['fr'] # disable language from here
 [markup.goldmark.renderer]
 unsafe = true
 
-canonifyURLs = true
-
 [markup]
   [markup.tableOfContents]
     endLevel = 5
