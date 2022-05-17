@@ -34,21 +34,21 @@ features:
 
   # feature at the right of the image
   right_side:
-    # feature item loop
+     # feature item loop
     - title: "Smooth Touch"
       icon: "tf-ion-ios-alarm-outline"
       content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, inventore?"
 
-      # feature item loop
+  # feature item loop
     - title: "Elegant Design"
       icon: "tf-ion-ios-bell-outline"
       content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, inventore?"
 
-      # feature item loop
+  # feature item loop
     - title: "Easy Pricing"
       icon: "tf-ion-ios-cart-outline"
       content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, inventore?"
-
+      
 ############################# promo ############################
 promo:
   enable: false
