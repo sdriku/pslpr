@@ -8,7 +8,7 @@ banner:
     want because we know that the person you are buying it for is worth it. We
     offer not only a 'fixed design' but also a 'bespoke' design where we create
     something unique only for you. "
-  image: images/watch.png
+  image: assets/img/2.png
   button:
     enable: true
     label: Browse All Products
